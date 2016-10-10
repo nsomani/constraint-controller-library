@@ -1,0 +1,81 @@
+#VRML V2.0 utf8
+Transform {
+	children [
+		DEF kuka-lwr4-right Transform {
+			translation 0 0 0
+			children [
+				Inline {
+					url "../robots/kuka/kuka-lwr4.convex/kuka-lwr4-right.wrl"
+				}
+			]
+		}
+		DEF robot-base Transform {
+			children [ 
+				DEF body1 Transform {
+					translation 0.0 0.0 -0.2425
+					rotation 0 0 1 1.5708
+					children [
+					    	Inline{
+							url "robotbase.wrl"
+						}
+					]
+				}
+			]
+		}
+		DEF table Transform {
+			children [ 
+				DEF body2 Transform {
+					translation 0.65 0 0.235		
+					children [
+						Inline{
+							url "table.wrl"
+						}
+					]
+				}
+			]
+		}
+		DEF tabletop Transform {
+			children [ 
+				DEF body3 Transform {
+					translation 0.65 0 0.2225			
+					children [
+						Inline {
+							url "tabletop.wrl"
+						}				
+					]
+				}
+			]
+		}
+		DEF cup Transform {
+			children [ 
+				DEF body5 Transform {
+					translation 0.6 -0.2 0.2375
+					children [
+						Inline {
+							url "soda-can.wrl"
+						}
+					]														
+				}
+			]
+		}	
+		DEF box Transform {
+			children [ 
+				DEF body4 Transform {
+					translation 0.7 0.05 0.3525
+					children [
+						Shape {
+							appearance Appearance {
+								material Material { 
+								}
+							}
+							geometry Box {
+								size 0.15 0.15 0.15
+							}
+						}
+					]														
+				}
+			]
+		}										
+	]
+}
+

@@ -1,0 +1,46 @@
+#VRML V2.0 utf8
+Transform {
+	children [
+		DEF weiss-kms40-adapter-top Transform {
+			children [
+				Inline {
+					url "weiss-robotics-transparent/kms40-iso40-adapter.wrl"
+				}
+			]
+		}
+		DEF weiss-kms40-adapter-bottom Transform {
+			translation 0 0 0.008
+			children [
+				Inline {
+					url "weiss-robotics-transparent/kms40-iso40-adapter.wrl"
+				}
+			]
+		}
+		DEF weiss-kms40 Transform {
+			translation 0 0 0.043
+			rotation 0 1 0 3.141593
+			children [
+				Inline {
+					url "weiss-robotics-transparent/kms40.wrl"
+				}
+			]
+		}
+		DEF weiss-wsg50-110-adapter Transform {
+			translation -0.01 0 0.043
+			children [
+				Inline {
+					url "weiss-robotics-transparent/wsg50-110-kms40-adapter.wrl"
+				}
+			]
+		}
+		DEF weiss-wsg50-110 Transform {
+			translation 0 0 0.051
+			rotation 0 0 1 1.570796
+			children [
+				Inline {
+					url "weiss-robotics-transparent/wsg50-110.wrl"
+				}
+			]
+		}
+	]
+}

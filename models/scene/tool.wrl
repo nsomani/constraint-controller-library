@@ -1,0 +1,69 @@
+#VRML V2.0 utf8
+Transform {
+	children [
+		DEF weiss-kms40-adapter-top Transform {
+			children [
+				Inline {
+					url "weiss-kms40-iso40-adapter.wrl"
+				}
+			]
+		}
+		DEF weiss-kms40-adapter-bottom Transform {
+		translation 0 0 0.008
+			children [
+				Inline {
+					url "weiss-kms40-iso40-adapter.wrl"
+				}
+			]
+		}
+		DEF weiss-kms40 Transform {
+		translation 0 0 0.043
+		rotation 0 1 0 3.14159265359
+			children [
+				Inline {
+					url "weiss-kms40.wrl"
+				}
+			]
+		}
+		DEF weiss-wsg50-110-adapter Transform {
+		translation -0.01 0 0.043
+			children [
+				Inline {
+					url "weiss-wsg50-110-adapter.wrl"
+				}
+			]
+		}
+		DEF weiss-wsg50-110 Transform {
+		translation 0 0 0.051
+			children [
+				Inline {
+					url "weiss-wsg50-110.wrl"
+				}
+			]
+		}
+		DEF weiss-wsgf-left Transform {
+			translation 0.063 0 0.14
+			rotation 0 0 1 1.57079632679
+			children [
+				Inline {
+					url "weiss-wsgf-adapter.wrl"
+				}
+				Inline {
+					url "weiss-wsgf.wrl"
+				}
+			]
+		}
+		DEF weiss-wsgf-right Transform {
+			translation -0.063 0 0.14
+			rotation 0 0 1 -1.57079632679
+			children [
+				Inline {
+					url "weiss-wsgf-adapter.wrl"
+				}
+				Inline {
+					url "weiss-wsgf.wrl"
+				}
+			]
+		}
+	]
+}

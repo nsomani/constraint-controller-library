@@ -1,0 +1,108 @@
+{
+    "solver": "quaternions",
+    "fixedPoseId": 1,
+    "objectPoses":
+    [
+        {
+            "id": 0,
+            "name": "fixed",
+            "transformation":
+            [
+                [1, 0, 0, 0],
+                [0, 1, 0, 0],
+                [0, 0, 1, 0],
+                [0, 0, 0, 1]
+            ]
+        },
+        {
+            "id": 1,
+            "name": "constrained",
+            "transformation":
+            [
+                [1, 0, 0, 0],
+                [0, 1, 0, 0],
+                [0, 0, 1, 0],
+                [0, 0, 0, 1]
+            ]
+        }
+    ],
+    "constraints":
+    [
+        {
+            "geometries": "plane_plane",
+            "type": "distance_min_max",
+            "flip": false,
+            "distance": 0,
+            "distance_min": -0.1,
+            "distance_max": 0.1,
+            "fixed":
+            {
+                "poseIndex": 0,
+                "point": [0, 0, 0.4575],
+                "normal": [0, 0, -1]
+
+            },
+            "constrained":
+            {
+            "poseIndex": 1,
+            "point": [0, 0, 0.2],
+            "normal": [0, 0, 1]
+            }
+        }
+    ],
+    "robot":
+    {
+        "kinematic-file-url": "scenario/rlmdl/comau-racer-7-14.mdl.xml",
+        "robot-name": "comau",
+        "model-id": 0,
+        "coach-IP": "localhost",
+        "dof": 6
+    },
+    "evaluation-params":
+    {
+        "exec": true,
+        "log": true,
+        "log-fname": "eval-comau.txt",
+        "trajectory":
+        [
+            {
+                "object": "robot",
+                "axis":"z",
+                "delta":-0.001,
+                "iter":50
+            },
+            {
+                "object": "robot",
+                "axis":"y",
+                "delta":-0.001,
+                "iter":100
+            },
+            {
+                "object": "robot",
+                "axis":"x",
+                "delta":-0.001,
+                "iter":100
+            },
+            {
+                "object": "robot",
+                "axis":"y",
+                "delta":0.001,
+                "iter":100
+            },
+            {
+                "object": "robot",
+                "axis":"x",
+                "delta":0.001,
+                "iter":100
+            }
+        ]
+    },
+    "solver-params":
+    {
+        "f-tol": 1e-6,
+        "x-tol": 1e-6,
+        "constraint-tol": 1e-6,
+        "stopval": 1e-6,
+        "max-time": 50e-3
+    }
+}

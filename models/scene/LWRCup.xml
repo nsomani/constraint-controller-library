@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rlsg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rlsg.xsd">
+	<scene href="LWRCup.wrl">
+		<model name="kuka-lwr4-right">
+			<body name="link0"/>
+			<body name="link1"/>
+			<body name="link2"/>
+			<body name="link3"/>
+			<body name="link4"/>
+			<body name="link5"/>
+			<body name="link6"/>
+			<body name="link7"/>
+		</model>
+		<model name="cylinder">
+			<body name="body4"/>
+		</model>
+		<model name="table">
+			<body name="body2"/>
+		</model>
+		<model name="robot-base">
+			<body name="body1"/>
+		</model>
+		<model name="tabletop">
+			<body name="body3"/>
+		</model>
+		<model name="cup">
+			<body name="body5"/>
+		</model>
+
+	</scene>
+</rlsg>
+

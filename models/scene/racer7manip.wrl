@@ -1,0 +1,62 @@
+#VRML V2.0 utf8
+Transform {
+	children [
+			DEF comau-racer-7-14 Transform {
+			children [
+				Inline {
+					url "../robots/comau-racer-7-14/comau-racer-7-14.wrl"
+				}
+			]
+		}
+		DEF robot-base Transform {
+			children [ 
+				DEF body1 Transform {
+					translation 0.0 0.0 -0.2425
+					rotation 0 0 1 1.5708
+					children [
+					    	Inline{
+							url "robotbase.wrl"
+						}
+					]
+				}
+			]
+		}
+		DEF table Transform {
+			children [ 
+				DEF body2 Transform {
+					translation 1.05 0 0.435		
+					children [
+						Inline{
+							url "table.wrl"
+						}
+					]
+				}
+			]
+		}
+		DEF tabletop Transform {
+			children [ 
+				DEF body3 Transform {
+					translation 1.05 0 0.4225			
+					children [
+						Inline {
+							url "tabletop.wrl"
+						}				
+					]
+				}
+			]
+		}
+		DEF manip Transform {
+			children [ 
+				DEF body5 Transform {
+					translation 0 0 0
+					children [
+						Inline {
+							url "manip.wrl"
+						}
+					]														
+				}
+			]
+		}									
+	]
+}
+

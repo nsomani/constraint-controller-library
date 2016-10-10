@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rlsg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rlsg.xsd">
+	<scene href="comau-rml-dual-arm/comau-rml-dual-arm.wrl">
+		<model name="left">
+			<body name="link0"/>
+			<body name="link1"/>
+			<body name="link2"/>
+			<body name="link3"/>
+			<body name="link4"/>
+			<body name="link5"/>
+			<body name="link6"/>
+		</model>
+		<model name="right">
+			<body name="link0"/>
+			<body name="link1"/>
+			<body name="link2"/>
+			<body name="link3"/>
+			<body name="link4"/>
+			<body name="link5"/>
+			<body name="link6"/>
+		</model>
+		<model name="rml">
+			<body name=""/>
+		</model>
+		<model name="tray">
+			<body name=""/>
+		</model>
+<!--
+		<model name="box1">
+			<body name="body4"/>
+		</model>	
+		<model name="box2">
+			<body name="body5"/>
+		</model>	
+-->
+
+	</scene>
+</rlsg>

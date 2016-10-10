@@ -1,0 +1,125 @@
+{
+    "solver": "quaternions",
+    "fixedPoseId": 1,
+    "objectPoses":
+    [
+        {
+            "id": 0,
+            "name": "fixed",
+            "transformation":
+            [
+                [1, 0, 0, 0],
+                [0, 1, 0, 0],
+                [0, 0, 1, 0],
+                [0, 0, 0, 1]
+            ]
+        },
+        {
+            "id": 1,
+            "name": "constrained",
+            "transformation":
+            [
+                [1, 0, 0, 0],
+                [0, 1, 0, 0],
+                [0, 0, 1, 0],
+                [0, 0, 0, 1]
+            ]
+        }
+    ],
+    "constraints":
+    [
+        {
+            "geometries": "plane_plane",
+            "type": "distance_min_max",
+            "flip": false,
+            "distance": 0,
+            "distance_min": -0.04,
+            "distance_max": 0.04,
+            "fixed":
+            {
+                "poseIndex": 0,
+                "point": [0.6, -0.2, 0.3175],
+                "normal": [0, 0, 1]
+
+            },
+            "constrained":
+            {
+            "poseIndex": 1,
+            "point": [0, 0, 0],
+            "normal": [0, -1, 0]
+            }
+        },
+        {
+            "geometries": "cylinder_cylinder",
+            "type": "distance_min_max",
+            "flip": false,
+            "distance_min": 0,
+            "distance_max": 0.01,
+            "fixed":
+            {
+                "poseIndex": 0,
+                "point": [0.6, -0.2, 0.3175],
+                "normal": [0, 0, 1]
+
+            },
+            "constrained":
+            {
+                "poseIndex": 1,
+                "point": [0, 0, 0.14],
+                "normal": [0, -1, 0]
+            }
+        }
+    ],
+    "env-constraints":
+    [
+        {
+            "type": "collision",
+            "scene-fname":"models/scene/LWRCupCollision.xml",
+            "collision-body-ids":
+            [
+                {
+                    "model-id":1,
+                    "body-id":0
+                }
+            ]
+
+        }
+    ],
+    "robot":
+    {
+        "kinematic-file-url": "models/rlmdl/kuka-lwr4-right.xml",
+        "robot-name": "lwr",
+        "model-id": 0,
+        "coach-IP": "localhost",
+        "dof": 7
+    },
+    "evaluation-params":
+    {
+        "exec": true,
+        "log": true,
+        "log-fname": "eval-kuka.txt",
+        "trajectory":
+        [
+            {
+                "object": "robot",
+                "axis":"y",
+                "delta":0.001,
+                "iter":50
+            },
+            {
+                "object": "object",
+                "axis":"x",
+                "delta":-0.001,
+                "iter":350
+            }
+        ]
+    },
+    "solver-params":
+    {
+        "f-tol": 1e-6,
+        "x-tol": 1e-6,
+        "constraint-tol": 1e-6,
+        "stopval": 1e-6,
+        "max-time": 50e-3
+    }
+}
