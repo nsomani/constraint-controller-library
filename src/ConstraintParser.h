@@ -35,7 +35,7 @@
 #include "skill/CompositePrioritySkill.h"
 #include "skill/CollisionAvoidanceSkill.h"
 #include "RobotControl.h"
-#include <json/json.h>
+#include <jsoncpp/json/json.h>
 
 struct MoveSegment
 {
