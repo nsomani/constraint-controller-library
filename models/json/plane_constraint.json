@@ -52,7 +52,7 @@
     ],
     "robot":
     {
-        "kinematic-file-url": "scenario/rlmdl/comau-racer-7-14.mdl.xml",
+        "kinematic-file-url": "models/rlmdl/comau-racer-7-14.mdl.xml",
         "robot-name": "comau",
         "model-id": 0,
         "coach-IP": "localhost",
